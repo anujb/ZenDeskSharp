@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{790EBD49-870F-4FB5-8C89-D2A16B984274}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ZenDeskSharp</RootNamespace>
+    <AssemblyName>ZenDeskSharp</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="RestSharp">
+      <HintPath>..\..\lib\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\..\lib\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Model\Attachment.cs" />
+    <Compile Include="Model\Comment.cs" />
+    <Compile Include="Model\Entry.cs" />
+    <Compile Include="Model\Forum.cs" />
+    <Compile Include="Model\Group.cs" />
+    <Compile Include="Model\Macro.cs" />
+    <Compile Include="Model\Organization.cs" />
+    <Compile Include="Model\Post.cs" />
+    <Compile Include="Model\Tag.cs" />
+    <Compile Include="Model\Ticket.cs" />
+    <Compile Include="Model\TicketField.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\UserEmailIdentity.cs" />
+    <Compile Include="Model\View.cs" />
+    <Compile Include="Model\ZenDeskConfig.cs" />
+    <Compile Include="Model\SearchRecord.cs" />
+    <Compile Include="Model\SearchSortType.cs" />
+    <Compile Include="Model\SearchResultType.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="Client\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Client\ZenDeskClient.cs" />
+  </ItemGroup>
+</Project>

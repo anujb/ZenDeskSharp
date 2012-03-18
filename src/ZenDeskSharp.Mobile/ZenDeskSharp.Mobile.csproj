@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{10263345-D2F3-40FB-8622-5F43F0504F86}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ZenDeskSharp.Mobile</RootNamespace>
+    <AssemblyName>ZenDeskSharp.Mobile</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="RestSharp.MonoTouch">
+      <HintPath>..\..\lib\mobile\RestSharp.MonoTouch.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\..\lib\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Client\" />
+    <Folder Include="Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\ZenDeskSharp\Model\Attachment.cs">
+      <Link>Model\Attachment.cs</Link>
+    </Compile>
+    <Compile Include="..\ZenDeskSharp\Model\Comment.cs">
+      <Link>Model\Comment.cs</Link>
+    </Compile>
+    <Compile Include="..\ZenDeskSharp\Model\Entry.cs">
+      <Link>Model\Entry.cs</Link>
+    </Compile>
+    <Compile Include="..\ZenDeskSharp\Model\Forum.cs">
+      <Link>Model\Forum.cs</Link>
+    </Compile>
+    <Compile Include="..\ZenDeskSharp\Model\Group.cs">
+      <Link>Model\Group.cs</Link>
+    </Compile>
+    <Compile Include="..\ZenDeskSharp\Model\Macro.cs">
+      <Link>Model\Macro.cs</Link>
+    </Compile>
+    <Compile Include="..\ZenDeskSharp\Model\Organization.cs">
+      <Link>Model\Organization.cs</Link>
+    </Compile>
+    <Compile Include="..\ZenDeskSharp\Model\Post.cs">
+      <Link>Model\Post.cs</Link>
+    </Compile>
+    <Compile Include="..\ZenDeskSharp\Model\Tag.cs">
+      <Link>Model\Tag.cs</Link>
+    </Compile>
+    <Compile Include="..\ZenDeskSharp\Model\Ticket.cs">
+      <Link>Model\Ticket.cs</Link>
+    </Compile>
+    <Compile Include="..\ZenDeskSharp\Model\TicketField.cs">
+      <Link>Model\TicketField.cs</Link>
+    </Compile>
+    <Compile Include="..\ZenDeskSharp\Model\User.cs">
+      <Link>Model\User.cs</Link>
+    </Compile>
+    <Compile Include="..\ZenDeskSharp\Model\UserEmailIdentity.cs">
+      <Link>Model\UserEmailIdentity.cs</Link>
+    </Compile>
+    <Compile Include="..\ZenDeskSharp\Model\View.cs">
+      <Link>Model\View.cs</Link>
+    </Compile>
+    <Compile Include="..\ZenDeskSharp\Model\ZenDeskConfig.cs">
+      <Link>Model\ZenDeskConfig.cs</Link>
+    </Compile>
+    <Compile Include="..\ZenDeskSharp\Client\ZenDeskClient.cs">
+      <Link>Client\ZenDeskClient.cs</Link>
+    </Compile>
+    <Compile Include="..\ZenDeskSharp\Model\SearchRecord.cs">
+      <Link>Model\SearchRecord.cs</Link>
+    </Compile>
+    <Compile Include="..\ZenDeskSharp\Model\SearchSortType.cs">
+      <Link>Model\SearchSortType.cs</Link>
+    </Compile>
+  </ItemGroup>
+</Project>
