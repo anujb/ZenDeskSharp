@@ -60,6 +60,10 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="MonoTouch.Dialog-1" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -67,6 +71,17 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="ViewControllers\RootViewController.cs" />
+    <Compile Include="ViewControllers\TicketsViewController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="ViewControllers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZenDeskSharp.Mobile\ZenDeskSharp.Mobile.csproj">
+      <Project>{10263345-D2F3-40FB-8622-5F43F0504F86}</Project>
+      <Name>ZenDeskSharp.Mobile</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

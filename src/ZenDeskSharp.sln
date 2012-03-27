@@ -73,6 +73,6 @@ Global
 		{519F228C-C77D-4890-99C6-BC215EB69F44} = {474BB2F7-6112-40B6-80DC-CC808988525F}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = ZenDeskSharp.Mobile.Tests\ZenDeskSharp.Mobile.Tests.csproj
+		StartupItem = ZenDeskSharp.MTSample\ZenDeskSharp.MTSample.csproj
 	EndGlobalSection
 EndGlobal

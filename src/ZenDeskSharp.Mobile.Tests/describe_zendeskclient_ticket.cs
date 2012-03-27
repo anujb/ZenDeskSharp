@@ -23,7 +23,7 @@ namespace ZenDeskSharp.Mobile.Tests
 		public void should_get_tickets()
 		{
 			var client = new ZenDeskClient(_config);
-			var result = client.GetTicketAsync("1");
+			var result = client.GetTicket("1");
 			Assert.NotNull(result);
 			
 		}

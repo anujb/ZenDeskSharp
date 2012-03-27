@@ -48,6 +48,7 @@
   <ItemGroup>
     <Folder Include="Client\" />
     <Folder Include="Model\" />
+    <Folder Include="SQLite\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\ZenDeskSharp\Model\Attachment.cs">
@@ -104,5 +105,6 @@
     <Compile Include="..\ZenDeskSharp\Model\SearchSortType.cs">
       <Link>Model\SearchSortType.cs</Link>
     </Compile>
+    <Compile Include="SQLite\SQLite.cs" />
   </ItemGroup>
 </Project>

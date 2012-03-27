@@ -8,10 +8,9 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace ZenDeskSharp
-{
+ {
 	public partial class ZenDeskClient
 	{
-		
 		private static RestClient _client;
 		private static ZenDeskConfig _config;
 		
@@ -22,6 +21,7 @@ namespace ZenDeskSharp
 			
 			_client.Authenticator = new HttpBasicAuthenticator(_config.Email, _config.Password);
 		}
+		
 		
 		public string GetSearchRecords(string searchQuery, Type entityType = null, SearchSortType sortType = null)
 		{
@@ -154,19 +154,29 @@ namespace ZenDeskSharp
 			var req = new RestRequest(uri);
 			var resp = _client.Execute(req);
 			
-			DeserializeTicket(resp.Content);
-			
-			return null;
+			return DeserializeTicket(resp.Content);
 		}
 		
 		private Ticket DeserializeTicket(string json)
 		{
 			return JsonObject.Parse(json).ConvertTo(x => new Ticket {
-				AssignedAt = x.Get<DateTime?>("assigned_at"),
+				AssignedAt = x.Get("assigned_at"),
+				AssigneeId = x.Get("assignee_id"),
+				AssigneeUpdatedAt = x.Get("assignee_update_at"),
 				CreatedAt = x.Get("created_at"),
 				Description = x.Get("description"),
-				StatusId = x.Get<int>("status_id"),
 				Subject = x.Get("subject"),
+				PriorityId = x.Get<int>("priority_id"),
+				SubmitterId = x.Get<int>("submitter_id"),
+				StatusId = x.Get<int>("status_id"),
+				StatusUpdatedAt = x.Get("status_updated_at"),
+				RequesterId = x.Get<int>("requester_id"),
+				RequesterUpdatedAt = x.Get("requester_updated_at"),
+				TicketTypeId = x.Get<int>("ticket_type_id"),
+				UpdatedAt = x.Get("updated_at"),
+				ViaId = x.Get<int>("via_id"),
+				CurrentTags = x.Get("current_tags"),
+				Score = x.Get<int>("score"),
 			});
 		}
 		

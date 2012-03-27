@@ -11,7 +11,7 @@ namespace ZenDeskSharp.Model
     public class Ticket
     {                
         [DataMember(Name = "assigned_at")]
-        public DateTime? AssignedAt { get; set; }
+        public string AssignedAt { get; set; }
 
         [DataMember(Name = "assignee_id")]
         public string AssigneeId { get; set; }
