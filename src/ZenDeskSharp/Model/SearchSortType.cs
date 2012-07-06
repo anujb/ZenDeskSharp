@@ -1,6 +1,4 @@
-using System;
-
-namespace ZenDeskSharp
+namespace ZenDeskSharp.Model
 {
 	public class SearchSortType
 	{
@@ -31,4 +29,3 @@ namespace ZenDeskSharp
 		public static readonly SearchSortType OrderBy_Created = new SearchSortType("ORDERBY_CREATEDAT");
 	}
 }
-
