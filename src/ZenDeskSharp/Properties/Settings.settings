@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ZenDeskSharp.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ZendeskUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ZendeskUrl</Value>
+    </Setting>
+    <Setting Name="ZendeskEMail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ZendeskEMail</Value>
+    </Setting>
+    <Setting Name="ZendeskPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ZendeskPassword</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

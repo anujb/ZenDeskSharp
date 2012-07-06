@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.ServiceModel;
+﻿using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace ZenDeskSharp.Model
@@ -140,7 +136,6 @@ namespace ZenDeskSharp.Model
         Normal,
         High,
         Urgent
-
     }
 
     public enum TicketViaType
@@ -158,6 +153,5 @@ namespace ZenDeskSharp.Model
         ClosedTicket = 27,
         Chat = 29,
         TwitterPublicMention = 30
-
     }
 }

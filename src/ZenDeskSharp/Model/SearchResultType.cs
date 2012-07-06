@@ -1,7 +1,6 @@
 using System;
-using ZenDeskSharp.Model;
 
-namespace ZenDeskSharp
+namespace ZenDeskSharp.Model
 {
 	public class SearchResultType
 	{

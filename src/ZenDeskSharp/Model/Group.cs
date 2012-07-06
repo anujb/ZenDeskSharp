@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace ZenDeskSharp.Model
 {
@@ -26,6 +24,5 @@ namespace ZenDeskSharp.Model
             if (Users != null && Users.Count > 0)                
                 UserIds = Users.Select(x => (int)x.Id).ToList();            
         }
-                
     }
 }

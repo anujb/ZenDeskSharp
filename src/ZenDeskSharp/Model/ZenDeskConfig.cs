@@ -1,6 +1,4 @@
-using System;
-
-namespace ZenDeskSharp
+namespace ZenDeskSharp.Model
 {
 	public class ZenDeskConfig
 	{

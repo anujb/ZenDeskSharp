@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using RestSharp.Serializers;
-
-namespace ZenDeskSharp.Model
+﻿namespace ZenDeskSharp.Model
 {        
     public class UserEmailIdentity
     {        
